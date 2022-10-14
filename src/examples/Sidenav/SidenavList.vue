@@ -51,7 +51,7 @@
   <div class="pt-3 mx-3 mt-3 sidenav-footer">
     
     <a
-      class="btn  mt-11 w-100"
+      class="btn  mt-6 w-100"
       href="https://www.facebook.com/cpe.eng.kps"
       type="button"
       >Feabook : ภาควิชา</a
