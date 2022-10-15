@@ -44,7 +44,7 @@ exports.findAll = (req, res) => {
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving tutorials."
+          err.message || "Some error occurred while retrieving organization."
       });
     });
   
@@ -52,7 +52,7 @@ exports.findAll = (req, res) => {
 
 // Find a single organization with an id
 exports.findOne = (req, res) => {
-    const id = req.params.o_id;
+    const id = req.params.id;
 
     Tutorial.findByPk(id)
       .then(data => {
@@ -73,7 +73,7 @@ exports.findOne = (req, res) => {
 
 // Update a organization by the id in the request
 exports.update = (req, res) => {
-    const id = req.params.o_id;
+    const id = req.params.id;
 
     Tutorial.update(req.body, {
       where: { id: id }
@@ -98,7 +98,7 @@ exports.update = (req, res) => {
 
 // Delete a organization with the specified id in the request
 exports.delete = (req, res) => {
-    const id = req.params.o_id;
+    const id = req.params.id;
 
     Tutorial.destroy({
       where: { id: id }
