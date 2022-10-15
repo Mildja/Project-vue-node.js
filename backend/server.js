@@ -19,6 +19,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = require("./app/models");
 db.sequelize.sync();
 
+db.sequelize.sync()
+  .then(() => {
+    console.log("Synced db.");
+  })
+  .catch((err) => {
+    console.log("Failed to sync db: " + err.message);
+  });
 // drop the table if it already exists
 /*
 db.sequelize.sync({ force: true }).then(() => {
@@ -31,6 +38,8 @@ db.sequelize.sync({ force: true }).then(() => {
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to pordie application." });
 });
+
+require("./app/routes/organization.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

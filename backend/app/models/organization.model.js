@@ -1,12 +1,12 @@
-module.exports = (sequelize, Sequelize) => {
-    const organization = sequelize.define("organization", {
+module.exports = (sequelize, DataTypes) => {
+    const Organization = sequelize.define("organization", {
       name: {
-        type: Sequelize.STRING
+        type: DataTypes.STRING(100)
       },
       addr: {
-        type: Sequelize.STRING
+        type: DataTypes.STRING(100)
       }
     });
   
-    return organization;
+    return Organization;
   };
