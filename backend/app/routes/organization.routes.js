@@ -2,8 +2,10 @@ module.exports = app => {
     const organization = require("../controllers/organization.controller.js");
   
     var router = require("express").Router();
+
   
-  
+    // Create a new 
+    router.post("/", organization.create);
   
     // Retrieve all 
     router.get("/", organization.findAll);
