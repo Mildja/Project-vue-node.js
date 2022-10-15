@@ -1,10 +1,16 @@
 module.exports = (sequelize, DataTypes) => {
     const Organization = sequelize.define("organization", {
-      name: {
-        type: DataTypes.STRING(100)
+      o_id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true
       },
-      addr: {
-        type: DataTypes.STRING(100)
+      o_name: {
+        type: DataTypes.STRING
+      },
+      o_addr: {
+        type: DataTypes.STRING
       }
     });
   
