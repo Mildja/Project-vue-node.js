@@ -2,7 +2,7 @@ module.exports = {
     HOST: "projectmild.postgres.database.azure.com",
     USER: "mildadmin@projectmild",
     PASSWORD: "project@2022",
-    DB: "project",
+    DB: "intern",
     dialect: "postgres",
     pool: {
       max: 5,

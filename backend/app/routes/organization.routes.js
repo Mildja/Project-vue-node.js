@@ -1,24 +1,24 @@
 module.exports = app => {
-    const organization = require("../controllers/organization.controller.js");
+    const organizations = require("../controllers/organization.controller.js");
   
     var router = require("express").Router();
 
   
     // Create a new 
-    router.post("/", organization.create);
+    router.post("/", organizations.create);
   
     // Retrieve all 
-    router.get("/", organization.findAll);
+    router.get("/", organizations.findAll);
   
     // Retrieve a single  with id
-    router.get("/:id", organization.findOne);
+    router.get("/:id", organizations.findOne);
   
     // Update a  with id
-    router.put("/:id", organization.update);
+    router.put("/:id", organizations.update);
   
     // Delete a  with id
-    router.delete("/:id", organization.delete);
+    router.delete("/:id", organizations.delete);
   
   
-    app.use("/api/organization", router);
+    app.use("/api/organizations", router);
   };
