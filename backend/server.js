@@ -29,11 +29,22 @@ app.get("/", (req, res) => {
 });
 
 
-require("./app/routes/organization.routes")(app);
-require("./app/routes/comsub.routes")(app);
 require("./app/routes/admin.routes")(app);
+require("./app/routes/announce.routes")(app);
+require("./app/routes/ap_request.routes")(app);
+require("./app/routes/colabor.routes")(app);
+require("./app/routes/comsub.routes")(app);
+require("./app/routes/cs_student.routes")(app);
+require("./app/routes/doc_present.routes")(app);
+require("./app/routes/doc_request.routes")(app);
+require("./app/routes/doc_sent.routes")(app);
+require("./app/routes/doc.routes")(app);
+require("./app/routes/grade.routes")(app);
+require("./app/routes/namedoc.routes")(app);
+require("./app/routes/organization.routes")(app);
+require("./app/routes/pic.routes")(app);
+require("./app/routes/request.routes")(app);
 require("./app/routes/student.routes")(app);
-
 
 
 // set port, listen for requests
